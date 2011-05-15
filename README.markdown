@@ -1,20 +1,20 @@
 # Foundtain - An Open Source Co-Founder Finder Website #
 
-This project is intended as an open source project website that enables future  
+This project is intended as an open source project website that enables future 
 entrepreneurs to find each other and colaborate on founding a business.
 
-There are a few of those websites already out there, but let's create  
+There are a few of those websites already out there, but let's create 
 something a little different.
 
-With foundtian the idea is to create a website based on profiles of founders  
+With foundtian the idea is to create a website based on profiles of founders 
 and not on craigslist style classifieds like the current major players, like
 
 + techcofounder.com
-(there it's 99$ to post a classified ad. We will create a free site. THere are  
+(there it's 99$ to post a classified ad. We will create a free site. There are 
 enough other places to spend your money when founding a business.)
 
 + findmycofounder.com
-(Classifieds, limited readability and only sortable by location. We can do  
+(Classifieds, limited readability and only sortable by location. We can do 
 better than that.)
 
 + matchfounders.com
@@ -54,28 +54,28 @@ founders who are online.
 This project will be released under the [MIT license](http://www.opensource.org/licenses/mit-license.php) (which basically says "do  
 whith it what you want but don't sue us"), which is the following:
 
-Copyright &copy; 2011 Konstantin Koss
-
-Permission is hereby granted, free of charge, to any person  
-obtaining a copy of this software and associated documentation  
-files (the "Software"), to deal in the Software without  
-restriction, including without limitation the rights to use,  
-copy, modify, merge, publish, distribute, sublicense, and/or sell  
-copies of the Software, and to permit persons to whom the  
-Software is furnished to do so, subject to the following  
-conditions:
-
-The above copyright notice and this permission notice shall be  
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,  
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES  
-OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND  
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT  
-HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,  
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING  
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR  
-OTHER DEALINGS IN THE SOFTWARE.
+> Copyright (C) 2011 Konstantin Koss
+> 
+> Permission is hereby granted, free of charge, to any person  
+> obtaining a copy of this software and associated documentation  
+> files (the "Software"), to deal in the Software without  
+> restriction, including without limitation the rights to use,  
+> copy, modify, merge, publish, distribute, sublicense, and/or sell  
+> copies of the Software, and to permit persons to whom the  
+> Software is furnished to do so, subject to the following  
+> conditions:
+> 
+> The above copyright notice and this permission notice shall be  
+> included in all copies or substantial portions of the Software.
+> 
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,  
+> EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES  
+> OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND  
+> NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT  
+> HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,  
+> WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING  
+> FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR  
+> OTHER DEALINGS IN THE SOFTWARE.
 
 
 Since this project is publicised on github, the social coding place, I welcome  
