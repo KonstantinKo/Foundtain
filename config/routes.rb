@@ -1,4 +1,12 @@
-FounderFinder::Application.routes.draw do
+Foundtain::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/about"
+
+  get "pages/terms"
+
+  get "pages/privacy_policy"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

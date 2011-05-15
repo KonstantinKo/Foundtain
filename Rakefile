@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-FounderFinder::Application.load_tasks
+Foundtain::Application.load_tasks
