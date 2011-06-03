@@ -1,4 +1,11 @@
 Foundtain::Application.routes.draw do
+  
+  resources :users
+  
+  root :to => "users#new"
+  
+  get "users/new"
+
   get "pages/home"
 
   get "pages/about"
