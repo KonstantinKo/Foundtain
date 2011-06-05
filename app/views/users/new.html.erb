@@ -1,2 +1,25 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>
+	<img src="images/foundtain.png" alt="Foundtain" />
+</h1>
+
+<p class="subtitle">You've come to the well. 
+	Now let's find you a cofounder.</p>
+
+<div class="signinup">
+	<%= form_for(@user) do |f| %>
+		<div class="field">
+			<%= f.label :email, "Type in your email address..." %>
+			<%= f.text_field :email %>
+		</div>
+		<div class="field">
+			<%= f.label :password, "...and your (desired) password." %>
+			<%= f.password_field :password %>
+		</div>
+		<div class="action">
+			<!-- <%= f.submit "Create Account / Sign In" %> -->
+			<%= image_submit_tag('create_btn.jpg') %>
+		</div>
+	<% end %>
+	
+	<img src="images/search_btn.jpg" alt="Search without Signup" />
+</div>

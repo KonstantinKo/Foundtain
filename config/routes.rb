@@ -13,6 +13,8 @@ Foundtain::Application.routes.draw do
   get "pages/terms"
 
   get "pages/privacy_policy"
+  
+  match '/:user_id' => 'users#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

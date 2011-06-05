@@ -1,0 +1,76 @@
+/** Main Layout Stylesheet **/
+
+body {
+	font-family: Arial;
+	background-color: #00427f;
+	background-image: url(/images/waterbg.jpg);
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+/*div {
+	border: 1px dashed black;
+}*/
+
+.container {
+	width: 563px;
+	margin: 150px auto 0px auto;
+}
+
+h1, .subtitle {
+	text-align: center;
+	margin: 0px;
+}
+
+.subtitle {
+	font-family: Arista20AlternateLightRegular, Arial, sans-serif;
+	font-size: 24px;
+	margin: 2px 0px 18px 0px;
+}
+
+.signinup {
+	background-image: url(/images/logincontainer.png);
+	width: 563px;
+	height: 119px;
+}
+
+.field {
+	width: 170px;
+	float: left;
+}
+
+input {
+	background-image: url(/images/field.jpg);
+	width: 169px;
+	height: 36px;
+	border: none;
+	margin: 2px 0px 0px 18px;
+}
+
+input[type="password"] {
+	margin-left: 28px;
+}
+
+input[type="image"] {
+	margin: 18px 0px 0px 33px;
+	width: 178px;
+	height: 42px;
+}
+
+label {
+	font-family: Arial, sans-serif;
+	font-size: 11px;
+	color: #888;
+	position: relative;
+			 top: 30px;
+			left: 30px;
+}
+
+label[for="user_password"] {
+	left: 38px;
+}
+
+.signinup img {
+	float: right;
+	margin: 8px 12px 0px 0px;
+}
