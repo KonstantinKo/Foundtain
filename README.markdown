@@ -49,10 +49,27 @@ founders who are online.
 
 
 
+## To-Do List ##
+
+- Dynamic account creation / log in on homepage
+
+- Extensive AJAX search function based on various user attributes (user index)
+
+- User backend (user show, update, delete)
+
+- Email verification (account creation, email update)
+
+- Index page of users' "classifieds"
+
+- Private Messages
+
+- Live chat for logged in users
+
+
+
 ## Open Source ##
 
-This project will be released under the [MIT license](http://www.opensource.org/licenses/mit-license.php) (which basically says "do  
-whith it what you want but don't sue us"), which is the following:
+This project will be released under the [MIT license](http://www.opensource.org/licenses/mit-license.php) (which basically says "do with it what you want but don't sue us"), which is the following:
 
 > Copyright (C) 2011 Konstantin Koss
 > 
