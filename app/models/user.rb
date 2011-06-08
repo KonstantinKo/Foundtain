@@ -38,7 +38,7 @@ class User < ActiveRecord::Base
     end	
     
     def authenticate_with_salt(id, cookie_salt)
-      user = find(id)
+      user = find_by_id(id)
       (user && user.salt == cookie_salt) ? user : nil
     end
   end

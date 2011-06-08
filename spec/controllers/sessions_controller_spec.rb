@@ -45,7 +45,22 @@ describe SessionsController do
         controller.current_user.should == @user
         controller.should be_signed_in
       end      
-      
+    end
+  end
+  
+  describe "DELETE destroy" do
+    before(:each) do
+      test_sign_in(Factory(:user))
+      delete :destroy
+    end
+    
+    it "should sign a user out" do
+      controller.should_not be_signed_in
+    end
+    
+    it "should have a flash message" do
+      response.should redirect_to(root_path)
+      flash[:notice].should =~ /logged out/i
     end
   end
 
