@@ -1,3 +1,16 @@
+# == Schema Information
+# Schema version: 20110608123645
+#
+# Table name: users
+#
+#  id                 :integer         not null, primary key
+#  email              :string(255)
+#  created_at         :datetime
+#  updated_at         :datetime
+#  salt               :string(255)
+#  encrypted_password :string(255)
+#
+
 class User < ActiveRecord::Base
   attr_accessor   :password
   # attr_accessible :email, :password

@@ -23,7 +23,8 @@ describe UsersController do
     
     it "should have the right title" do
       get :new
-      response.should have_selector('title', :content => "Foundtain | Get Started!")
+      response.should have_selector('title',
+                                    :content => "Foundtain | Get Started!")
     end
     
     describe "form" do
@@ -74,6 +75,26 @@ describe UsersController do
         response.should redirect_to(root_path)
         flash[:failure].should =~ /try again/i
       end
+    end
+    
+    describe "success" do
+      before(:each) do
+        @attr = {:email => "sample@sampleuser.com", :password => "foobar"}
+      end
+      
+      it "should create a user" do
+        lambda do
+          post :create, :user => @attr
+        end.should change(User, :count).by(1)
+      end
+      
+      it "should redirect to the edit user page with a success flash" do
+        post :create, :user => @attr
+        response.should redirect_to(user_edit_path)
+        flash[:success].should =~ /successful/i
+      end
+      
+      
     end
   end
 

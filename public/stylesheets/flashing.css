@@ -1,34 +1,62 @@
 /** For Flash Notices **/
 
+/*div {
+	border: 1px solid black;
+}*/
+
 .flash {
 	position: absolute;
+			 top: 0px;
+			left: auto;
+}
+
+.flashtop {
+	width: 552px;
+	height: 23px;
+	background-image: url(/images/flash/flashtop-s.png);
+	background-repeat: no-repeat;
+}
+
+.flashbot {
+/* position: absolute;
 			 top: 30px;
 			left: auto;
 	padding: 0.8em; 
-	margin-bottom: 1em; 
-	border: 2px solid #ddd;
+	border: 2px solid #ddd; 
+	margin-bottom: 1em; */
+	width: 552px;
+	height: 32px; /*42*/
+	overflow: none;
+	background-image: url(/images/flash/flashbot.png);
+	background-repeat: no-repeat;
+	margin: 0px;
+	text-align: center;
+	padding-top: 10px;
 }
 
 .failure {
-	background: #fbe3e4; 
+/*	background-color: #fbe3e4; 
+	border-color: #fbc2c4;*/
 	color: #8a1f11; 
-	border-color: #fbc2c4;
+	background-image: url(/images/flash/flashbotred.png);
 }
 
 .success {
-	background: #e6efc2;
+/*	background-color: #e6efc2;
+	border-color: #c6d880;*/
 	color: #264409;
-	border-color: #c6d880;
+	background-image: url(/images/flash/flashbotgreen.png);
 }
 
-.notice {
-	background: #fff6bf;
+.notice, .info {
+/*	background-color: #fff6bf;
+	border-color: #ffd324;*/
 	color: #514721;
-	border-color: #ffd324;
+	background-image: url(/images/flash/flashbotyellow.png);
 }
 
-.info { 
-	background: #d5edf8; 
+/*.info { 
+	background-color: #d5edf8; 
 	color: #205791; 
 	border-color: #92cae4;
-	}
+	}*/
