@@ -8,12 +8,19 @@
 <div class="signinup">
 	<%= form_for(@user) do |f| %>
 		<div class="field">
-			<%= f.label :email, "Type in your email address..." %>
-			<%= f.text_field :email %>
+			<%= f.label :email, :class => "hidden" %>
+			<%= f.text_field :email, :value => "Type in your email address...",
+															 :id 			=> "signmail",
+															 :onfocus => "switchvalue('signmail')",
+															 :onblur	=> "switchvalue('signmail')" %>
 		</div>
 		<div class="field">
-			<%= f.label :password, "...and your (desired) password." %>
-			<%= f.password_field :password %>
+			<%= f.label :password, :class => "hidden" %>
+			<%= f.text_field :password, 
+													 :value 	=> "...and your (desired) password.",
+													 :id 			=> "signpass",
+													 :onfocus => "switchtype('signpass')",
+													 :onblur	=> "switchtype('signpass')" %>
 		</div>
 		<div class="action">
 			<!-- <%= f.submit "Create Account / Sign In" %> -->

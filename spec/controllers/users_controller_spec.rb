@@ -25,6 +25,14 @@ describe UsersController do
       get :new
       response.should have_selector('title', :content => "Foundtain | Get Started!")
     end
+    
+    describe "form" do
+      it "should have a password field" do
+        get :new
+        response.should have_selector('input', :name => "user[password]")
+      end
+    end
+    
   end
   
   describe "POST 'create'" do
@@ -41,7 +49,7 @@ describe UsersController do
       
       it "should have a success flash" do
         post :create, :user => @attr
-        flash[:success].should =~ /success/i
+        flash[:success].should =~ /created/i
       end
       
       it "should redirect to the member show page" do

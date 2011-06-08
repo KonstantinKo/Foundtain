@@ -3,14 +3,22 @@
 <head>
   <title>Foundtain | <%= @title %></title>
   <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag :all %>
   <%= csrf_meta_tag %>
 	<link type="text/css" rel="stylesheet" media="screen"
 	 href="/stylesheets/font/stylesheet.css">
 </head>
 <body>
 	<div class="container">
-		<%= yield %>
+		<% flash.each do |key, value| %>
+			<div class="flash <%= key %> round">
+				<%= value %>
+			</div>
+		<% end %>
+		
+		<div class="main">
+			<%= yield %>
+		</div>
 	</div>
 </body>
 </html>

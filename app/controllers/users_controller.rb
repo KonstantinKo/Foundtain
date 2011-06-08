@@ -13,10 +13,10 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       redirect_to @user, 
-      :flash => { :success => "The creation was successful." }
+      :flash => { :success => "The account was created." }
     else
       redirect_to root_path, 
-      :flash => {:failure => "Creation was unsuccessful. Please try again."}
+      :flash => {:failure => "You're doing it wrong. (Please try again.)"}
     end
   end
 

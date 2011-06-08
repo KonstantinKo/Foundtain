@@ -2,7 +2,7 @@
 
 body {
 	font-family: Arial;
-	background-color: #00427f;
+	background-color: #04447c;
 	background-image: url(/images/waterbg.jpg);
 	background-repeat: no-repeat;
 	background-position: top center;
@@ -14,7 +14,17 @@ body {
 
 .container {
 	width: 563px;
-	margin: 150px auto 0px auto;
+	margin: 0px auto;
+}
+	
+.round {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.main {
+	margin-top: 150px;
 }
 
 h1, .subtitle {
@@ -29,7 +39,7 @@ h1, .subtitle {
 }
 
 .signinup {
-	background-image: url(/images/logincontainer.png);
+	background-image: url(/images/logincontainer2.png);
 	width: 563px;
 	height: 119px;
 }
@@ -37,17 +47,23 @@ h1, .subtitle {
 .field {
 	width: 170px;
 	float: left;
+
 }
 
 input {
 	background-image: url(/images/field.jpg);
-	width: 169px;
+	width: 161px;
 	height: 36px;
 	border: none;
-	margin: 2px 0px 0px 18px;
+	margin: 22px 0px 0px 18px;
+	padding-left: 8px;
+	/* label import */
+	font-family: Arial, sans-serif;
+	font-size: 11px;
+	color: #888;
 }
 
-input[type="password"] {
+input#signpass {
 	margin-left: 28px;
 }
 
@@ -55,16 +71,17 @@ input[type="image"] {
 	margin: 18px 0px 0px 33px;
 	width: 178px;
 	height: 42px;
+	padding-left: 0px;
 }
 
-label {
+/*label {
 	font-family: Arial, sans-serif;
 	font-size: 11px;
 	color: #888;
 	position: relative;
 			 top: 30px;
 			left: 30px;
-}
+}*/
 
 label[for="user_password"] {
 	left: 38px;
@@ -73,4 +90,8 @@ label[for="user_password"] {
 .signinup img {
 	float: right;
 	margin: 8px 12px 0px 0px;
+}
+
+.hidden {
+	display: none;
 }

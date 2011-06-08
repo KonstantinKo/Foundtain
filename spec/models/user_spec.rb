@@ -39,4 +39,19 @@ describe User do
       valid_user.should be_valid
     end
   end
+  
+  it "should accept valid passwords" do
+    valid_passwords = ["hello", "FoObar~", "10923092oajdojcxkyjdjka"]
+    valid_passwords.each do |pw|
+      valid_user = User.create(@attr.merge(:email => Factory.next(:email), 
+                                           :password => pw))
+      valid_user.should be_valid
+    end
+  end
+  
+  it "should reject invalid passwords" do
+   invalid_user = User.create(@attr.
+                  merge(:password => "... and your (desired) password!"))
+   invalid_user.should_not be_valid
+  end
 end
