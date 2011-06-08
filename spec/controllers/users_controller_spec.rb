@@ -24,7 +24,7 @@ describe UsersController do
     it "should have the right title" do
       get :new
       response.should have_selector('title',
-                                    :content => "Foundtain | Get Started!")
+                                    :content => "Get Started! | Foundtain")
     end
     
     describe "form" do
@@ -55,7 +55,7 @@ describe UsersController do
       
       it "should redirect to the member show page" do
         post :create, :user => @attr
-        response.should redirect_to(user_path(assigns(:user)))
+        response.should redirect_to(edit_user_path(assigns(:user)))
       end
     end
     
@@ -90,11 +90,19 @@ describe UsersController do
       
       it "should redirect to the edit user page with a success flash" do
         post :create, :user => @attr
-        response.should redirect_to(user_edit_path)
+        response.should redirect_to(edit_user_path(assigns(:user)))
         flash[:success].should =~ /successful/i
       end
-      
-      
+    end
+  end
+  
+  describe "GET edit" do
+    before(:each) do
+      @user = Factory(:user)
+    end
+    it "should exist" do
+      get :edit, :id => @user
+      response.should be_success
     end
   end
 

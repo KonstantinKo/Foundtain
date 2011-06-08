@@ -4,7 +4,7 @@ gem 'rails'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'gravatar_image_tag'
 gem 'will_paginate'
-gem 'bcrypt-ruby', :require => 'bcrypt'
+# gem 'bcrypt-ruby', :require => 'bcrypt'
 
 group :development do
   gem 'rspec-rails', '>= 2.1.0'

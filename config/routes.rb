@@ -4,6 +4,8 @@ Foundtain::Application.routes.draw do
   get "sign_up" => 'users#new', :as => 'sign_up'
   get 'log_in' => 'sessions#new', :as => "log_in"
   get 'log_out' => 'sessions#destroy', :as => "log_out"
+  
+  get 'index_users' => 'users#index', :as => "index_users"
 
   resources :users
   resources :sessions

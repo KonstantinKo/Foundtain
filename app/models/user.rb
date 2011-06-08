@@ -17,8 +17,8 @@ class User < ActiveRecord::Base
   
   before_save :encrypt_password
   
-  email_regex     = /\S+@\S+\.\S+/i
-  password_regex  = /^\S+$/i
+  email_regex     = /\S+@\S+\.\S+/i   # x@y.z
+  password_regex  = /^\S+$/i          # Disallows spaces
   
   validates       :email,    :presence => true, 
                              :uniqueness => { :case_sensitive => false },
@@ -26,19 +26,39 @@ class User < ActiveRecord::Base
   validates       :password, :presence => true,
                              :format => { :with => password_regex }
                              
-  def self.authenticate(email, password)
-    user = find_by_email(email)
-    if user && user.password == BCrypt::Engine.hash_secret(password, user.salt)
-      user
-    else
-      nil
+  
+  def has_password?(submitted_password)
+    encrypted_password == encrypt(submitted_password)
+  end
+  
+  class << self
+    def authenticate(email, submitted_password)
+      user = find_by_email(email)
+      ( user && user.has_password?(submitted_password) ) ? user : nil
+    end	
+    
+    def authenticate_with_salt(id, cookie_salt)
+      user = find(id)
+      (user && user.salt == cookie_salt) ? user : nil
     end
   end
-                             
+  
+  private
+  
   def encrypt_password
-    if password.present?
-      self.salt = BCrypt::Engine.generate_salt
-      self.password = BCrypt::Engine.hash_secret(password, salt)
-    end
+      self.salt = make_salt if new_record?
+      self.encrypted_password = encrypt(self.password)
+  end
+  
+  def encrypt(string)
+    secure_hash("#{salt}-foundtain-#{string}")
+  end
+  
+  def make_salt
+    secure_hash("#{Time.now.utc}--#{password}")
+  end
+  
+  def secure_hash(string)
+    Digest::SHA2.hexdigest(string)
   end
 end
