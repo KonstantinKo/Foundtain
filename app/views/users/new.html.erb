@@ -6,7 +6,7 @@
 	Now let's find you a cofounder.</p>
 
 <div class="signinup">
-	<%= form_for(@user) do |f| %>
+	<%= form_for @user, :url => decision_path do |f| %>
 		<div class="field">
 			<%= f.label :email, :class => "hidden" %>
 			<%= f.text_field :email, :value => "Type in your email address...",

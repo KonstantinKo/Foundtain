@@ -6,6 +6,8 @@ Foundtain::Application.routes.draw do
   get 'log_out' => 'sessions#destroy', :as => "log_out"
   
   get 'index_users' => 'users#index', :as => "index_users"
+  
+  match '/decide', :to => 'pages#decide', :as => 'decision'
 
   resources :users
   resources :sessions

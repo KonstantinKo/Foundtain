@@ -9,11 +9,12 @@ describe "LayoutLinks" do
       fill_in "user[email]",     :with => "newuser@domain.org.uk"
       fill_in "user[password]",  :with => "foobar"
       click_button
+      puts response.body
       flash[:success].should =~ /created/i
       visit log_out_path
       visit root_path
-      fill_in :email,   :with => "newuser@domain.org.uk"
-      fill_in :password, :with => "foobar"
+      fill_in "user[email]",     :with => "newuser@domain.org.uk"
+      fill_in "user[password]",  :with => "foobar"
       click_button
       flash[:success].should =~ /logged in/i  
     end
