@@ -3,6 +3,29 @@ require 'spec_helper'
 describe UsersController do
   render_views
   
+  describe "GET index" do
+    before(:each) do
+      40.times do 
+        Factory(:user, :email => Factory.next(:email))
+      end
+      get :index
+    end
+    
+    it "should exist" do
+      response.should be_success
+    end
+    
+    it "should have the right title" do
+      response.should have_selector('title', :content => "Users | Foundtain")
+    end
+    
+    it "should have an element for each user" do
+      User.paginate(:page => 1).each do |user|
+        response.should have_selector('div', :content => user.name)
+      end
+    end
+  end
+  
   describe "GET 'show'" do
     before(:each) do
       @user = Factory(:user)

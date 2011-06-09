@@ -51,8 +51,6 @@ founders who are online.
 
 ## To-Do List ##
 
-- Dynamic account creation / log in on homepage
-
 - Extensive AJAX search function based on various user attributes (user index)
 
 - User backend (user show, update, delete)
