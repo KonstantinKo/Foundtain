@@ -14,7 +14,7 @@ end
 
 group :test do
   gem 'rspec'
-  gem 'webrat'
+  gem 'webrat'# , '>=0.7.2.beta.6', :git => 'git://github.com/orangewise/webrat.git'
   gem 'spork', '~> 0.9.0.rc' #, :git => "git://github.com/chrismdp/spork.git"
   gem 'factory_girl_rails'
 end
