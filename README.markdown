@@ -36,7 +36,7 @@ make or break businesses, not ideas.
 looking for a cofounder, right?) and what they are looking for.
 
 - The "looking for" section will kind of act like the currently popular  
-classifieds and will also be searchable seperately
+classifieds and will also be searchable separately
 
 - Let's enable everyone to search around, but require people to sign up (for  
 free) for the site to view profiles. That way we grow the database of  
